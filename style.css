@@ -106,6 +106,7 @@ h3{
   }
   h3{
     font-size: clamp(1.1rem, 3.6vw, 1.5rem);
+    margin-bottom: 10px;
     
   }
 }
@@ -239,31 +240,26 @@ h3{
 
  html{
     background:
-      /* spot alto dx */
-      radial-gradient(420px 320px at 85% 4%,
-        #38b6ff 0%,
-        rgba(56,182,255,0.0) 68%),
+      radial-gradient(360px 280px at 85% 2%,
+        #4ac2ff 0%,
+        rgba(74,194,255,0) 75%),
 
-      /* spot alto sx */
-      radial-gradient(520px 420px at 8% 14%,
-        #0f7ad6 0%,
-        rgba(15,122,214,0.0) 70%),
+      radial-gradient(460px 380px at 6% 12%,
+        #1787e6 0%,
+        rgba(23,135,230,0) 78%),
 
-      /* spot basso centro */
-      radial-gradient(520px 420px at 50% 108%,
-        #0b5aa5 0%,
-        rgba(11,90,165,0.0) 72%),
+      radial-gradient(460px 380px at 50% 108%,
+        #0b69c7 0%,
+        rgba(11,105,199,0) 80%),
 
-      /* spot medio sinistra per dare profondità */
-      radial-gradient(380px 300px at 22% 55%,
-        rgba(120,200,255,0.35) 0%,
-        rgba(120,200,255,0.0) 70%),
+      radial-gradient(320px 260px at 20% 55%,
+        rgba(150,220,255,0.45) 0%,
+        rgba(150,220,255,0) 78%),
 
-      /* base */
       linear-gradient(180deg,
         #041a30 0%,
-        #062544 60%,
-        #083a75 100%);
+        #062544 55%,
+        #0a3a6b 100%);
 
     background-repeat: no-repeat;
     background-size: cover;
