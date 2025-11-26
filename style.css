@@ -66,7 +66,7 @@ h1{
 }
 
 h2{
-  font-size: clamp(0.5rem, 2vw, 1.7rem);
+  font-size: clamp(0.95rem, 2vw, 1.7rem);
   font-weight: 400;
   margin: 1px 0 3px;
   letter-spacing: .3px;
@@ -74,7 +74,7 @@ h2{
 }
 
 h3{
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: 300;
   margin: 0;            /* toglie margini default */
   line-height: 1; 
@@ -176,19 +176,6 @@ h3{
   border-bottom-color: rgba(233,242,251,0.8);
 }
 
-/* Responsive: su mobile va tutto in colonna */
-@media (max-width: 520px){
-  .row{
-    grid-template-columns: 1fr; /* impila */
-    gap: 6px;
-    text-align: left;
-  }
-
-  .logo{
-    justify-content: flex-start; /* icona allineata a sinistra */
-  }
-}
-
 /* Area bottoni */
 .actions{
   margin-top: 14px;
@@ -219,25 +206,38 @@ h3{
   transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 520px){
+
+  /* NON impilare: resta a 3 colonne ma più strette */
   .row{
-    grid-template-columns: 1fr; /* label sopra valore */
-    gap: 6px;
+    grid-template-columns: 80px 44px 1fr; /* label | logo | value */
+    gap: 8px;
+    padding: 10px 12px;
   }
+
   .label{
-    font-size: .9rem;
+    font-size: 0.95rem;
+    text-align: center;
   }
+
+  .logo img{
+    width: 28px;
+    height: 28px;
+  }
+
   .value{
     font-size: 1rem;
   }
+
   .actions{
     justify-content: stretch;
   }
+
   #saveBtn{
     width: 100%;
   }
 }
+
 
 /* entry animation: contenuto sale dal basso e poi si ferma */
 .wrap{
