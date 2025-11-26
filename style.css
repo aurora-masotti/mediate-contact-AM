@@ -26,32 +26,15 @@ body{
   font-family: system-ui, Arial, sans-serif;
   color: var(--ink);
   min-height: 100vh;
-  background: #041321;      /* base scura */
-  overflow-x: hidden;
-}
-
-html::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;                   /* NON negativo */
-
-  /* Gradiente acceso */
   background:
-    radial-gradient(1600px 1000px at 90% -20%, #2aa7ff 0%, rgba(42,167,255,0.0) 55%),
-    radial-gradient(1300px 900px at -25% 10%, #0f7ad6 0%, rgba(15,122,214,0.0) 60%),
-    radial-gradient(1100px 900px at 50% 120%, #0b5aa5 0%, rgba(11,90,165,0.0) 65%),
-    radial-gradient(900px 700px at 20% 80%, rgba(120,200,255,0.25) 0%, rgba(120,200,255,0.0) 60%),
+    radial-gradient(1600px 1000px at 90% -20%, #2aa7ff 0%, rgba(42,167,255,0) 55%),
+    radial-gradient(1300px 900px at -25% 10%, #0f7ad6 0%, rgba(15,122,214,0) 60%),
+    radial-gradient(1100px 900px at 50% 120%, #0b5aa5 0%, rgba(11,90,165,0) 65%),
+    radial-gradient(900px 700px at 20% 80%, rgba(120,200,255,0.25) 0%, rgba(120,200,255,0) 60%),
     linear-gradient(170deg, #02080f 0%, #041a30 45%, #01060c 100%);
-
-  transform: translateZ(0);     /* hack iOS per mantenere il fixed */
-}
-
-body{
-  position: relative;
-  z-index: 1;          /* contenuto sopra */
-  background: #041321; /* base scura per sicurezza */
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 
@@ -247,6 +230,24 @@ h3{
 
 @media (max-width: 768px){
 
+  body{
+    /* Mobile: gradiente dedicato, molto contrastato */
+    background:
+      radial-gradient(900px 600px at 85% 0%, #38b6ff 0%, rgba(56,182,255,0) 60%),
+      radial-gradient(800px 700px at 0% 20%, #127fe3 0%, rgba(18,127,227,0) 65%),
+      radial-gradient(700px 600px at 50% 110%, #0c63b8 0%, rgba(12,99,184,0) 70%),
+      linear-gradient(180deg, #02070d 0%, #041c33 55%, #01060b 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* IMPORTANTISSIMO: niente contenitori che coprono lo sfondo */
+  .wrap,
+  .card,
+  .row{
+    background-clip: padding-box;
+  }
+  
   .row{
     grid-template-columns: auto auto;   /* label e logo larghezza contenuto */
     grid-template-areas:
