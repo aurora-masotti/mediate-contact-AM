@@ -347,6 +347,14 @@ h3{
   }
 }
 
+@media (prefers-color-scheme: dark){
+  #saveBtn{
+    background: #ffffff !important;
+    color: #0b2a45 !important;
+  }
+}
+
+
 
 
 
