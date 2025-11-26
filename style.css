@@ -3,7 +3,7 @@ html, body{
   padding: 0;
   min-height: 100svh;          /* altezza reale viewport mobile */
   background-color: #041a30;   /* fallback blu su ENTRAMBI */
-  overscroll-behavior: none;  /* evita “tirata” nera */
+  
 }
 
 
